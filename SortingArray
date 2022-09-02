@@ -1,0 +1,36 @@
+#Test#
+#############PROGRAM SORTING ARRAY ASCENDING##################
+arr = [3,2,4,1,5] #array awal
+arrr = [] #array temporary untuk penempatan array baru yang telah di sorting
+
+#for i in range(0,len(arr)): untuk printt tanpa kurung dan koma
+    #print(arr[i], end=" ")
+#print(arr)   
+
+for i in range(0, len(arr)):
+    for j in range(i+1, len(arr)):
+        if arr[i] > arr[j]: #Untuk program sorting descending, ubah tanda aritmatika menjadi <
+            arrr = arr[i]
+            arr[i] = arr[j]
+            arr[j] = arrr
+            print(arr) #Melihat perubahan tiap sort
+print()
+print(arr,"\n")
+
+#################PROGRAM ARRAY INPUT#####################
+array = []
+panjangArray = int(input("Input panjang array : ")) #input length array
+for i in range(0,panjangArray):
+    isiArray = int(input("Input isi array : ")) #input isi array
+    array.append(isiArray)
+print(array,"\n") #print isi array
+
+# Dibawah ini kode untuk sorting nya
+arrayTemp = []
+for i in range(0, len(array)):
+    for j in range(i+1, len(array)):
+        if array[i] > array[j]:
+           arrayTemp = array[i]
+           array[i] = array[j]
+           array[j] = arrayTemp
+print(array)
