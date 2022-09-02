@@ -1,0 +1,119 @@
+# COBACOBACOBA
+# -------------------------SOAL NOMOR 1 FIX
+# def jumlah(arrayInteger):
+#     n = 0
+#     for i in arrayInteger:
+#         n = n + i
+#     return(n)
+
+# arrayInteger = [1,2,3,4,5,6,7,8,9,10]
+ 
+# jawab = jumlah(arrayInteger)
+
+# print(jawab)
+
+
+# ------------------------SOAL NOMOR 2 DENGAN FUNCTION LEN()
+# x = int(input("Input : "))
+# arrayInteger = [10,23,45,92,101,102,103,10001]
+# def cari(arrayInteger, x):
+#     low = 0
+#     high = len(arrayInteger) - 1
+#     mid = 0
+#     while low <= high:
+#         mid = (high + low) // 2
+#         # If x is greater, ignore left half
+#         if arrayInteger[mid] < x:
+#             low = mid + 1
+#         # If x is smaller, ignore right half
+#         elif arrayInteger[mid] > x:
+#             high = mid - 1 
+#         # means x is present at mid
+#         else:
+#             return mid
+#     # If we reach here, then the element was not present
+#     return -1 
+# # Function call
+# index = cari(arrayInteger, x)
+# if index != -1:
+#     print(index)
+# else:
+#     print("Nilai salah.")
+
+
+# -------------------------SOAL NOMOR 2 TANPA FUNCTION BUILT-IN LEN()
+# x = int(input("Input : "))
+# arrayInteger = [10,23,45,92,101,102,103,10001]
+# panjangArray = 0
+# for i in arrayInteger :
+#     panjangArray+=1
+#     panjangArray
+# def cari(arrayInteger, x):
+#     low = 0
+#     high = panjangArray - 1
+#     mid = 0
+#     while low <= high:
+#         mid = (high + low) // 2
+#         # If x is greater, ignore left half
+#         if arrayInteger[mid] < x:
+#             low = mid + 1
+#         # If x is smaller, ignore right half
+#         elif arrayInteger[mid] > x:
+#             high = mid - 1 
+#         # means x is present at mid
+#         else:
+#             return mid
+#     # If we reach here, then the element was not present
+#     return -1 
+# # Function call
+# index = cari(arrayInteger, x)
+# if index != -1:
+#     print(index)
+# else:
+#     print("Nilai salah.")
+
+
+# ----------------------------SOAL NOMOR 3 DENGAN FUNCTION BUILT-IN COLLECTION
+# import collections
+# arrayInteger = [5,100,12,4,5,2,12,13]
+# hitung_nilai = collections.Counter(arrayInteger)
+# for key, value in hitung_nilai.items():
+#     print(f"{key} {value}X")
+
+
+# ----------------------------SOAL NOMOR 3
+# arrayInteger = [5, 100, 12, 4, 5, 2, 12, 13]
+# def hitung(x): 
+#   n = 0
+#   for i in arrayInteger:
+#     if i == x:
+#       n += 1
+#   return n
+
+# arrayR = [5, 100, 12, 4, 2, 13]
+# for e in arrayR:
+#   print(e, hitung(e),"X")
+
+arrayInteger = [24,23,45,76,101,98,15,11]
+arraysort = [] # Output 11,15,23,24,45,76,98,101 
+panjangArray = 0
+for i in arrayInteger:
+    panjangArray += 1 
+for i in range(0,panjangArray):
+    print(arrayInteger[i], end=" ")
+    
+for i in range(0,panjangArray):
+    for j in range(i+1, panjangArray):
+        if arrayInteger[i] > arrayInteger[j]:
+            arraysort = arrayInteger[i]
+            arrayInteger[i] = arrayInteger[j]
+            arrayInteger[j] = arraysort
+print()
+
+for i in range(0,panjangArray):
+    print(arrayInteger[i],end=" ")
+
+
+# arrgh = [24,23,45,76,101,98,15,11]
+
+# while true
